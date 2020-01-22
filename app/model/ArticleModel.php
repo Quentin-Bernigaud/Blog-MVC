@@ -5,7 +5,7 @@ use Core\Model\Model;
 class ArticleModel extends Model {
 
     public function queryArticles() {
-        return $this->db->query("SELECT * FROM articles", false);
+        return $this->db->query("SELECT * FROM articles ORDER BY date DESC", false);
     }
 
     public function newArticle() {
