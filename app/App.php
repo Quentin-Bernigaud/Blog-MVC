@@ -28,6 +28,11 @@ class App {
         return new \App\Model\ArticleModel($this->getDb());
     }
 
+    public function getTableCategorie($name) {
+        $className = '\\app\\model\\' .ucfirst($name). 'Model';
+        return new \app\model\CategorieModel($this->getDb());
+    }
+
     public function getDb() {
         $config = Config::getInstance(ROOT . "/settings/settings.php");
         if (is_null($this->dbInstance)) {

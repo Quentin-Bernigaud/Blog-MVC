@@ -14,7 +14,7 @@ class Database {
         $this->dbPass = $dbPass;
 
         if($this->pdo == null) {
-            $pdo = new \PDO('mysql:dbname=' .$this->dbName. ';host=' .$this->dbHost, $this->dbUser, $this->dbPass);
+            $pdo = new \PDO('mysql:dbname=' .$this->dbName. ';charset=utf8;host=' .$this->dbHost, $this->dbUser, $this->dbPass);
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         $this->pdo = $pdo;
