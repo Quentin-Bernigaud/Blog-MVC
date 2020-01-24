@@ -9,9 +9,9 @@
 } ?>
 
 <h1 class='text-center mt-5 mb-5 text-uppercase'>
-    <?php $actu = "Actualité"?>
-    <?=$actu?>    
-    <?php if ( $filtreCategorie >= 0 ) { ?><?=$filtreCategorieName?><?php }?>
+    <?php $actu = "Actualités"?>
+    <?php if ( $filtreCategorie <= 0 ) { ?><?=$actu?><?php }?>  
+    <?php if ( $filtreCategorie > 0 ) { ?><?=$filtreCategorieName?><?php }?>
 </h1>
 
 <div class="container">

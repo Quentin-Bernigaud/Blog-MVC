@@ -44,7 +44,7 @@
     </main>
     <footer>
         <div class="d-flex justify-content-center align-items-center">
-            <p class="mt-4 mb-4 h6 text-center" style="color: #0F2439">IIM 2020 - Quentin Bernigaud</p>
+            <p class="mt-5 mb-4 h6 text-center" style="color: #0F2439">IIM 2020 - Quentin Bernigaud</p>
         </div>
     </footer>
 </body>

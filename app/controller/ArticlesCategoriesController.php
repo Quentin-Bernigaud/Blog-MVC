@@ -14,4 +14,13 @@ class ArticlesCategoriesController extends AppController {
             "filtreCategorie" => $filtreCategorie
         ]);
     }
+
+    public function single($articleId) {
+        $article = $this->Article->queryArticle($articleId);
+        $categories = $this->Categorie->queryCategories();
+        return $this->render('global.single', [
+            "article" => $article,
+            "categories" => $categories
+        ]);
+    }
 }
