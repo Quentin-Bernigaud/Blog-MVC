@@ -12,6 +12,13 @@
 - Suppression d'article.
 Avoir un code clair et bien documenté.
 
+## Notation
+
+- Fonctionnalité /5
+- Clareté du code /5
+- Documentation (commentaires) /5
+- Complétude de l'énoncé /5
+
 ## Rendu
 - *Dimanche soir* max par mail, drive ou github.
   - Mon mail: **gaillotalexandre0@gmail.com**
