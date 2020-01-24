@@ -13,6 +13,10 @@ class ArticleModel extends Model {
         return $arr[0];
     }
 
+    public function deleteArticle($id) {
+        return $this->db->delete("DELETE FROM articles WHERE id=".$id);
+    }
+
     public function newArticle() {
         $this->db->save(
             'INSERT INTO articles SET title = ?, text=?, date=?, categorie_id= ?',

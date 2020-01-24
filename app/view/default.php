@@ -13,33 +13,30 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background: #0F2439">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: #0F2439; padding-left: 150px; padding-right: 150px">
             <!-- <a class="navbar-brand" href="index.php?page='home'"> -->
-                <a class="navbar-brand" href="./">
-                <!-- <span class="navbar-brand mb-0 h1">OM Actu</span> -->
-                <span class="navbar-brand mb-0 h1"></span>
+            <a class="navbar-brand" href="./">
+                <span class="navbar-brand mb-0 h1">OM Actualité</span>
+                <!-- <span class="navbar-brand mb-0 h1"></span> -->
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="#">Actualité <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Catégories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Connexion</a>
-                </li> -->
-            </ul>
-        </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #0097D7;"></nav>
-</header>
-<main>
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <form class="form-inline">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Connexion</button>
+            </form>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: #0097D7;"></nav>
+    </header>
+    <main>
         <?= $content ?>
     </main>
     <footer>
@@ -48,5 +45,4 @@
         </div>
     </footer>
 </body>
-
 </html>

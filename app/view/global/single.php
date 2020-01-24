@@ -28,8 +28,11 @@
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        <a href="/blog/">
+        <a href="/blog/" class="mt-5 mb-5">
             <button type="button" class="btn btn-outline-dark">Voir les autres articles</button>
+        </a>
+        <a href="index.php?page=delete&id=<?=$article["id"]?>" class="mt-5 mb5 ml-3">
+            <button type="button" class="btn btn-outline-danger">Supprimer</button>
         </a>
     </div>
 </div>

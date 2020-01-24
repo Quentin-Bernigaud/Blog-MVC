@@ -23,4 +23,11 @@ class ArticlesCategoriesController extends AppController {
             "categories" => $categories
         ]);
     }
+
+    public function delete($articleId) {
+        // SQL de suppression
+        $this->Article->deleteArticle($articleId);
+        return $this->render('global.delete', [
+        ]);
+    }
 }

@@ -26,6 +26,10 @@ class Database {
         $datas->execute($values);
     }
 
+    public function delete($statement) {
+       $this->pdo->exec($statement);
+    }
+
     public function query($statement, $one = false) {
         $datas = $this->pdo->query($statement);
         if ($one) {

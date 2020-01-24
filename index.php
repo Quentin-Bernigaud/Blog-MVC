@@ -12,4 +12,7 @@ if (isset($_GET["page"]) && $_GET["page"] == 'home' || !isset($_GET["page"])) {
 } elseif (isset($_GET["page"]) && $_GET["page"] == 'single') {
     $result = new ArticlesCategoriesController();
     $result->single($_GET["id"]);
+}  elseif (isset($_GET["page"]) && $_GET["page"] == 'delete') {
+    $result = new ArticlesCategoriesController();
+    $result->delete($_GET["id"]);
 }
