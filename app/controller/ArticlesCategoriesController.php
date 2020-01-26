@@ -59,7 +59,7 @@ class ArticlesCategoriesController extends AppController {
     }
 
     public function update($articleId, $title, $text, $date, $categorie_id) {
-        $articleId = $this->Article->updateArticle($articleId, $title, $text, $date, $categorie_id);
+        $this->Article->updateArticle($articleId, $title, $text, $date, $categorie_id);
         // puis affichage
         return $this->single($articleId);
     }

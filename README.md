@@ -19,6 +19,6 @@ Avoir un code clair et bien documenté.
 - Documentation (commentaires) /5
 - Complétude de l'énoncé /5
 
-## Rendu
-- *Dimanche soir* max par mail, drive ou github.
-  - Mon mail: **gaillotalexandre0@gmail.com**
+## Base de donnée
+- Importer le fichier `iim_blog.sql`
+- Modifier le fichier `settings.php`

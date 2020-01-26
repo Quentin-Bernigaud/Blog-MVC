@@ -23,9 +23,8 @@ class ArticleModel extends Model {
             [$title, $text, $date, $categorie_id]);
         return $this->db::lastInsertId();
     }
+    
     public function updateArticle($id,$title, $text, $date, $categorie_id) {
-        return $this->db->save(
-            'UPDATE articles SET title = ?, text=?, date=?, categorie_id= ? WHERE id=?',
-            [$title, $text, $date, $categorie_id, $id]);
+        $this->db->save("UPDATE articles SET title = ?, text=?, date=?, categorie_id= ? WHERE id=?",  [$title, $text, $date, $categorie_id, $id]);
     }
 }
