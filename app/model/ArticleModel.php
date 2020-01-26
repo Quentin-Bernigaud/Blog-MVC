@@ -5,7 +5,7 @@ use Core\Model\Model;
 class ArticleModel extends Model {
 
     public function queryArticles() {
-        return $this->db->query("SELECT a.*, c.titre FROM articles a LEFT JOIN categories c ON a.categorie_id = c.id ORDER BY date DESC", false);
+        return $this->db->query("SELECT a.*, c.titre FROM articles a LEFT JOIN categories c on a.categorie_id = c.id ORDER BY date DESC", false);
     }
 
     public function queryArticle($id) {
@@ -14,12 +14,18 @@ class ArticleModel extends Model {
     }
 
     public function deleteArticle($id) {
-        return $this->db->delete("DELETE FROM articles WHERE id=".$id);
+        return $this->db->query("DELETE FROM articles WHERE id=".$id);
     }
 
-    public function newArticle() {
+    public function newArticle($title, $text, $date, $categorie_id) {
         $this->db->save(
             'INSERT INTO articles SET title = ?, text=?, date=?, categorie_id= ?',
-            ["Article n°1", "Voici un nouvel article !!!", "21/01/2020", 4]);
+            [$title, $text, $date, $categorie_id]);
+        return $this->db::lastInsertId();
+    }
+    public function updateArticle($id,$title, $text, $date, $categorie_id) {
+        return $this->db->save(
+            'UPDATE articles SET title = ?, text=?, date=?, categorie_id= ? WHERE id=?',
+            [$title, $text, $date, $categorie_id, $id]);
     }
 }
